@@ -18,7 +18,7 @@ const cron = require('node-cron');
 const UserModel = require('./models/UserSchema');
 
 const app = express();
-const PORT = 3000;
+const PORT = 10000;
 
 
 // Set the view engine to EJS
