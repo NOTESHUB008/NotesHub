@@ -15,7 +15,7 @@ const sendVerificationEmail = async (rollno, token) => {
         from: "noteshub008@gmail.com",
         to: `${rollno}@nitrkl.ac.in`,
         subject: "Email Verification",
-        text: `Please verify your email by clicking the link: https://reimagine-pzln.onrender.com/verify-email?token=${token}&rollno=${rollno}`,
+        text: `Please verify your email by clicking the link: https://noteshub-2t1b.onrender.com/verify-email?token=${token}&rollno=${rollno}`,
     };
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
