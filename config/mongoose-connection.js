@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const mongoURI ="mongodb://127.0.0.1:27017/NotesHub";
-// const mongoURI ="mongodb+srv://noteshub008:aHjMXhyml4J9wFZS@cluster0.uoehi.mongodb.net/NotesHub?retryWrites=true&w=majority&appName=Cluster0";
+// const mongoURI ="mongodb://127.0.0.1:27017/NotesHub";
+const mongoURI ="mongodb+srv://noteshub008:aHjMXhyml4J9wFZS@cluster0.uoehi.mongodb.net/NotesHub?retryWrites=true&w=majority&appName=Cluster0";
 mongoose.set('debug', true); // Enable detailed Mongoose logs
 
 mongoose.connect(mongoURI, {
