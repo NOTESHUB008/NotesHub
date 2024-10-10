@@ -106,7 +106,7 @@ app.post("/user/create", upload.single('image'), async (req, res) => {
             userId: userId
         });
 
-        req.flash('prompt','No one,No one teach it better.')
+        req.flash('prompt','Your Notes are Created')
         res.redirect("/user/createnote");
     } catch (err) {
         console.error(err);
