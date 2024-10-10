@@ -13,7 +13,7 @@ module.exports.loginUser = async (req, res) => {
         let user = await UserModel.findOne({ rollno });
 
         if (!user) {
-            req.flash('prompt', 'No Not That !!!');
+            req.flash('prompt', 'Rollno or Password Incorrect');
             return res.redirect("/");
         }
 
@@ -39,7 +39,7 @@ module.exports.loginUser = async (req, res) => {
                 });
                 res.render("About", { user, addedNotes, lovedNotes });
             } else {
-                req.flash('prompt', 'No Not That !!!');
+                req.flash('prompt', 'Rollno or Password Incorrect');
                 return res.redirect("/");
             }
         });
