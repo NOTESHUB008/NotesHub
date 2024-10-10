@@ -122,7 +122,7 @@ module.exports.registerUser = async (req, res) => {
         // Send verification email
         await sendVerificationEmail(rollno, verificationToken);
 
-        req.flash('prompt', 'Verification email sent on Zymbra!');
+        req.flash('prompt', 'Verification email sent on Zimbra!');
         res.redirect("/");
     } catch (err) {
         console.log(err.message);
