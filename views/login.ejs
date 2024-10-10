@@ -103,13 +103,13 @@
         <p class="exp">Expires in 30 minutes</p></div>
     <div class="container">
         <div class="toggle-buttons">
-            <button id="registerBtn" onclick="switchForm('register')">Register</button> <!-- Added Register button -->
+            <button id="registerBtn" class="active" onclick="switchForm('register')">Register</button>
             <button id="userBtn" onclick="switchForm('user')">User Login</button>
-            <button id="adminBtn" class="active" onclick="switchForm('admin')">Admin Login</button>
+            <button id="adminBtn" onclick="switchForm('admin')">Admin Login</button>
         </div>
         
         <!-- Admin Login Form -->
-        <div id="adminForm" class="form">
+        <div id="adminForm" class="form" style="display:none;"> <!-- Initially hidden -->
             <h1>Admin Login</h1>
             <form action="/Admin" method="POST">
                 <div class="form-group">
@@ -121,9 +121,9 @@
                 <button type="submit">Login</button>
             </form>
         </div>
-
+        
         <!-- User Login Form -->
-        <div id="userForm" class="form" style="display:none;">
+        <div id="userForm" class="form" style="display:none;"> <!-- Initially hidden -->
             <h1>User Login</h1>
             <form action="/user" method="POST">
                 <div class="form-group">
@@ -135,9 +135,9 @@
                 <button type="submit">Login</button>
             </form>
         </div>
-
+        
         <!-- Registration Form -->
-        <div id="registerForm" class="form" style="display:none;">
+        <div id="registerForm" class="form"> <!-- Initially visible -->
             <h1>Register</h1>
             <form action="/register" method="POST">
                 <div class="form-group">
@@ -151,7 +151,7 @@
                 </div>
                 <button type="submit">Register</button>
             </form>
-        </div>
+        </div>        
     </div>
 
     <h3>Please give us Feedback at <p style="color: #ff9800;">NOTESHUB008@gmail.com</p></h3>
