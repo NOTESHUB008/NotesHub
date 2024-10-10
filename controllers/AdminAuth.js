@@ -32,7 +32,7 @@ module.exports.loginAdmin = async (req, res) => {
         
 
         if (!admin) {
-            req.flash('prompt', 'No Not That !!!');
+            req.flash('prompt', 'Rollno or Password Incorrect');
             return res.redirect("/");
         }
 
@@ -50,7 +50,7 @@ module.exports.loginAdmin = async (req, res) => {
             // Render all users if login is successful
             res.render("AllUsers", { users, notesAddedMap, notesLovedMap });
         } else {
-            req.flash('prompt', 'No Not That !!!');
+            req.flash('prompt', 'Rollno or Password Incorrect');
             return res.redirect("/");
         }
     } catch (err) {
